@@ -12,6 +12,30 @@
 .spouse {
   display: flex;
 }
+.user-details {
+  position: relative;
+  .fa-heart {
+    color: var(--primary-color);
+    position: absolute;
+    top: 45%;
+    right: -75px;
+    transform: translate(100%, -50%);
+    // font-size: 18px;
+    animation: fa-heart 2s ease-out infinite;
+  }
+}
+
+@keyframes fa-heart {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 .is-parent {
   .user-details-before {
     position: relative;

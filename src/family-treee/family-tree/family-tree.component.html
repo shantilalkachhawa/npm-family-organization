@@ -11,6 +11,10 @@
           : 'user-details-before'
       "
     >
+       <i
+        *ngIf="family_members?.spouses && family_members.spouses[0]"
+        class="fa fa-heart"
+      ></i>
       <div
         class="d-flex align-items-center justify-content-between layout-inner"
       >
@@ -88,7 +92,10 @@
           last ? 'spouse-section border-before' : 'spouse-section border-after'
         "
       >
-        <span class="spouse-detail" id="user-data">
+        <span class="spouse-detail" id="user-data"  [ngStyle]="{
+            background: spouse.spouse_detail ? 'pink' : '',
+            border: spouse.spouse_detail ? 'pink' : ''
+          }">
           <div
             class="d-flex align-items-center justify-content-between layout-inner"
           >

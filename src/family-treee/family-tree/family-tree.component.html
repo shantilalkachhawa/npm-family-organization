@@ -180,7 +180,7 @@
             spouse.children && spouse.children.length > 1 && !first && !last
         }"
       >
-        <div class="border-content"></div>
+        <div class="border-content"   *ngIf="spouse.children && spouse.children.length > 1"></div>
         <app-family-org-chart
           [family_members]="child"
           [isFirst]="first"
